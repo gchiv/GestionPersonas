@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Personas - Escuela</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Gestión de Personas By Gabriel Chi</h1>
+  <button id="btn-abrir-modal" class="btn">➕ Nueva Persona</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Sexo</th>
+        <th>Fecha Nac.</th>
+        <th>Rol</th>
+        <th colspan="2">Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Modal -->
+  <div id="modal-formulario" class="modal oculto">
+    <div class="modal-contenido">
+      <h2 id="modal-titulo">Formulario Persona</h2>
+      <form id="form-persona">
+        <label>Nombre:</label>
+        <input type="text" id="a1" required>
+
+        <label>Apellido:</label>
+        <input type="text" id="a2" required>
+
+        <label>Sexo:</label>
+        <div>
+          <label><input type="radio" name="sexo" value="M"> Masculino</label>
+          <label><input type="radio" name="sexo" value="F"> Femenino</label>
+        </div>
+
+        <label>Fecha de Nacimiento:</label>
+        <input type="date" id="a3" required>
+
+        <label>Rol:</label>
+        <select id="a4" required>
+          <option value="">Seleccione</option>
+          <option value="1">Estudiante</option>
+          <option value="2">Profesor</option>
+          <option value="3">Administrativo</option>
+          <option value="4">Directivo</option>
+        </select>
+
+        <div class="botones-modal">
+          <button type="submit" class="btn guardar">Guardar</button>
+          <button type="button" id="btn-cerrar-modal" class="btn cancelar">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="registro.js"></script>
+</body>
+</html>
